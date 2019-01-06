@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>replaceWith demo</title>
+    <script src="common/js/vendor/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+        <p id="demo" onclick="open()"></p>
+    <script>
+        function open() {
+            window.location.href = "www.google.com"
+	        //window.location.href  = '<a href="hub://openurl?url=">hub://openUrl?url=</a>' + encodeURIComponent("https://www.google.com")
+        }
+document.getElementById("demo").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+       /* $("document").ready(function() {
+            $.extend({
+                getUrlVars: function() {
+                    var vars = [],
+                        hash;
+                    var url = window.location.href;
+                    var hashes = url.slice(window.location.href.indexOf('?') + 1).split('&');
+                    for (var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        vars.push(hash[0]);
+                        vars[hash[0]] = hash[1];
+                    }
+                    return vars;
+                },
+                getUrlVar: function(name) {
+                    return $.getUrlVars()[name];
+                }
+            });
+            var byAuth = $.getUrlVar('auth');
+            setTimeout(function() {
+                console.log(byAuth);
+                window.location.href="https://orangehubservices.mpsvcs.com/hubservices/rest/mailservice/downloadattachment/153/2/RogersKT.txt?auth="+byAuth+"&folderid=default0/Sent";  
+            },100);
+        });*/
+    </script>
+</body>
+
+</html>

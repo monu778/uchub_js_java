@@ -1,0 +1,590 @@
+{ "data": [ 
+    {
+    "last_modified" : 1535374524951,
+    "creation_date" : 1533823056000,
+    "modified_by" : 333,
+    "created_by" : 141,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Hub Portal/Front-end meeting",
+    "start_date" : 1536598800000,
+    "end_date" : 1536600600000,
+    "note" : "Agenda,1. Feature completion details2. Open issues3. Limitations",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 1
+    }, {
+      "id" : 333,
+      "confirmation" : 2
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1670
+  }, {
+    "last_modified" : 1535375341098,
+    "creation_date" : 1533822982000,
+    "modified_by" : 333,
+    "created_by" : 141,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Hub server meeting",
+    "start_date" : 1536600600000,
+    "end_date" : 1536604200000,
+    "note" : "Agenda,1. Feature completion details2. Open issues3. Limitations",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 1
+    }, {
+      "id" : 333,
+      "confirmation" : 1
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1669
+  }, {
+    "last_modified" : 1535375349722,
+    "creation_date" : 1533823133000,
+    "modified_by" : 333,
+    "created_by" : 141,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Hub Testing status",
+    "start_date" : 1536604200000,
+    "end_date" : 1536607800000,
+    "note" : "Agenda,1. Number of open issues in server and portal.2. Number of feature completion3. Any limitations",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 1
+    }, {
+      "id" : 333,
+      "confirmation" : 1
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1671
+  }, {
+    "last_modified" : 1536139034921,
+    "creation_date" : 1535362547000,
+    "modified_by" : 141,
+    "created_by" : 334,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "hub issues today",
+    "start_date" : 1536606000000,
+    "end_date" : 1536609600000,
+    "note" : " OHP-195 Calendar App - Search and swapping between tabs in not working properly2.                      @Sravan  - Pagination when we have a search string is broken after the fix and  its going in infinite loop. Please fix as high priorityOHP-192 Calendar App Contextual - data is not grouped  @Shubhada  Please remove the log with the hash map details and instead add the log that gives the exact resppnse from Orange@Sravan- The pagination details are not sent correctly in request. Please check ticket for more detailsOHP-194 Drive App - when there is a session time out drive app is not redirecting to the session re login page like the mail and calendar app.@Brijesh, please recheck if all the drive APIs on the server is giving back the valid session timeout response 1.            4.  OHP-198 Calendar App & Contextual - The accept/decline/tentative icons must show up at all times.2.                    @Sravan - Reopened as contextual declined invite is not show3.            5. OHP-197 Calendar App - On hover the items get highlighted in blue. This must not happen as they are not clickableFixed and DeployedWorking1.            6. OHP-196   All Apps - where ever we show \"no more items\" after pagination, we must change the text to \"All items displayed\"@Sravan  Reopened. Please check ticket for details.      7. OHP-199  The background text in the search bars must show Mail Search / Calendar Search / Drive search according@Sravan, reopened as it needs to be Drive Search.OHP-200 All Apps - When the last character of the search is deleted, it must remove the X on its own.Under Progress",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 5,
+      "mail" : "nkashyap@broadsoft.com",
+      "display_name" : "nkashyap",
+      "id" : 0
+    }, {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    }, {
+      "type" : 5,
+      "mail" : "sgarlapati@broadsoft.com",
+      "display_name" : "sgarlapati",
+      "id" : 0
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 1
+    }, {
+      "id" : 333,
+      "confirmation" : 0
+    }, {
+      "id" : 334,
+      "confirmation" : 1
+    } ],
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1772
+  }, {
+    "last_modified" : 1536088381335,
+    "creation_date" : 1534242965000,
+    "modified_by" : 333,
+    "created_by" : 333,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Software updates for Hub development",
+    "start_date" : 1536611400000,
+    "end_date" : 1536613200000,
+    "note" : "Agenda and What's new in,1. Java 8 features.2. Angular js front-end tools.3. Tomcat features.4. Apache webserver features.",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 0
+    }, {
+      "id" : 333,
+      "confirmation" : 3
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1674
+  }, {
+    "last_modified" : 1536088021167,
+    "creation_date" : 1534242747000,
+    "modified_by" : 333,
+    "created_by" : 333,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "AWS news update",
+    "start_date" : 1536613200000,
+    "end_date" : 1536615000000,
+    "note" : "Agenda and What's new in,1. AWS cloud computing2. AWS security enhancement3. AWS networking features4. AWS database features",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 0
+    }, {
+      "id" : 333,
+      "confirmation" : 2
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1672
+  }, {
+    "last_modified" : 1535374566018,
+    "creation_date" : 1534245595000,
+    "modified_by" : 333,
+    "created_by" : 334,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Hub release plan",
+    "start_date" : 1536616800000,
+    "end_date" : 1536618600000,
+    "note" : "Agenda,1. Discuss on the sprints completed.2. Discuss on the features/tickets completed for the release.",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 0
+    }, {
+      "id" : 333,
+      "confirmation" : 1
+    }, {
+      "id" : 334,
+      "confirmation" : 1
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1677
+  }, {
+    "last_modified" : 1535604048766,
+    "creation_date" : 1534245764000,
+    "modified_by" : 333,
+    "created_by" : 334,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Hub deployment plan",
+    "start_date" : 1536622200000,
+    "end_date" : 1536625800000,
+    "note" : "Agenda,1. Discuss on pre-prod and production deployment plan.2. Discuss on post deployment verification3. Discuss on environment status post deployment.",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 0
+    }, {
+      "id" : 333,
+      "confirmation" : 2
+    }, {
+      "id" : 334,
+      "confirmation" : 1
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1679
+  }, {
+    "last_modified" : 1535374524951,
+    "creation_date" : 1533823056000,
+    "modified_by" : 333,
+    "created_by" : 141,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Hub Portal/Front-end meeting",
+    "start_date" : 1536685200000,
+    "end_date" : 1536687000000,
+    "note" : "Agenda,1. Feature completion details2. Open issues3. Limitations",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 1
+    }, {
+      "id" : 333,
+      "confirmation" : 2
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1670
+  }, {
+    "last_modified" : 1535375341098,
+    "creation_date" : 1533822982000,
+    "modified_by" : 333,
+    "created_by" : 141,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Hub server meeting",
+    "start_date" : 1536687000000,
+    "end_date" : 1536690600000,
+    "note" : "Agenda,1. Feature completion details2. Open issues3. Limitations",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 1
+    }, {
+      "id" : 333,
+      "confirmation" : 1
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1669
+  }, {
+    "last_modified" : 1535375349722,
+    "creation_date" : 1533823133000,
+    "modified_by" : 333,
+    "created_by" : 141,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Hub Testing status",
+    "start_date" : 1536690600000,
+    "end_date" : 1536694200000,
+    "note" : "Agenda,1. Number of open issues in server and portal.2. Number of feature completion3. Any limitations",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 1
+    }, {
+      "id" : 333,
+      "confirmation" : 1
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1671
+  }, {
+    "last_modified" : 1536139034921,
+    "creation_date" : 1535362547000,
+    "modified_by" : 141,
+    "created_by" : 334,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "hub issues today",
+    "start_date" : 1536692400000,
+    "end_date" : 1536696000000,
+    "note" : " OHP-195 Calendar App - Search and swapping between tabs in not working properly2.                      @Sravan  - Pagination when we have a search string is broken after the fix and  its going in infinite loop. Please fix as high priorityOHP-192 Calendar App Contextual - data is not grouped  @Shubhada  Please remove the log with the hash map details and instead add the log that gives the exact resppnse from Orange@Sravan- The pagination details are not sent correctly in request. Please check ticket for more detailsOHP-194 Drive App - when there is a session time out drive app is not redirecting to the session re login page like the mail and calendar app.@Brijesh, please recheck if all the drive APIs on the server is giving back the valid session timeout response 1.            4.  OHP-198 Calendar App & Contextual - The accept/decline/tentative icons must show up at all times.2.                    @Sravan - Reopened as contextual declined invite is not show3.            5. OHP-197 Calendar App - On hover the items get highlighted in blue. This must not happen as they are not clickableFixed and DeployedWorking1.            6. OHP-196   All Apps - where ever we show \"no more items\" after pagination, we must change the text to \"All items displayed\"@Sravan  Reopened. Please check ticket for details.      7. OHP-199  The background text in the search bars must show Mail Search / Calendar Search / Drive search according@Sravan, reopened as it needs to be Drive Search.OHP-200 All Apps - When the last character of the search is deleted, it must remove the X on its own.Under Progress",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 5,
+      "mail" : "nkashyap@broadsoft.com",
+      "display_name" : "nkashyap",
+      "id" : 0
+    }, {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    }, {
+      "type" : 5,
+      "mail" : "sgarlapati@broadsoft.com",
+      "display_name" : "sgarlapati",
+      "id" : 0
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 1
+    }, {
+      "id" : 333,
+      "confirmation" : 0
+    }, {
+      "id" : 334,
+      "confirmation" : 1
+    } ],
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1772
+  }, {
+    "last_modified" : 1536088381335,
+    "creation_date" : 1534242965000,
+    "modified_by" : 333,
+    "created_by" : 333,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Software updates for Hub development",
+    "start_date" : 1536697800000,
+    "end_date" : 1536699600000,
+    "note" : "Agenda and What's new in,1. Java 8 features.2. Angular js front-end tools.3. Tomcat features.4. Apache webserver features.",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 0
+    }, {
+      "id" : 333,
+      "confirmation" : 3
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1674
+  }, {
+    "last_modified" : 1536088021167,
+    "creation_date" : 1534242747000,
+    "modified_by" : 333,
+    "created_by" : 333,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "AWS news update",
+    "start_date" : 1536699600000,
+    "end_date" : 1536701400000,
+    "note" : "Agenda and What's new in,1. AWS cloud computing2. AWS security enhancement3. AWS networking features4. AWS database features",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 0
+    }, {
+      "id" : 333,
+      "confirmation" : 2
+    }, {
+      "id" : 334,
+      "confirmation" : 0
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1672
+  }, {
+    "last_modified" : 1535374566018,
+    "creation_date" : 1534245595000,
+    "modified_by" : 333,
+    "created_by" : 334,
+    "folder_id" : 26995,
+    "color_label" : 0,
+    "private_flag" : false,
+    "title" : "Hub release plan",
+    "start_date" : 1536703200000,
+    "end_date" : 1536705000000,
+
+    "note" : "Agenda,1. Discuss on the sprints completed.2. Discuss on the features/tickets completed for the release.",
+    "recurrence_type" : 2,
+    "participants" : [ {
+      "type" : 1,
+      "id" : 141
+    }, {
+      "type" : 1,
+      "id" : 333
+    }, {
+      "type" : 1,
+      "id" : 334
+    } ],
+    "users" : [ {
+      "id" : 141,
+      "confirmation" : 0
+    }, {
+      "id" : 333,
+      "confirmation" : 1
+    }, {
+      "id" : 334,
+      "confirmation" : 1
+    } ],
+    "alarm" : 15,
+    "days" : 62,
+    "interval" : 1,
+    "until" : 1546214400000,
+    "id" : 1677
+  } ]
+} 

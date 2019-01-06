@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright © 2016 BroadSoft. All rights reserved. -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:hz="http://www.hazelcast.com/schema/spring" 
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/context
+		   http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.broadsoft.demohub.api.*" />
+	
+	<bean id="propertyPlaceholderConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:api.properties</value>
+			</list>
+		</property>
+		 <property name="ignoreUnresolvablePlaceholders" value="true"/>
+	</bean>
+	
+	<bean id="configManager" class="com.broadsoft.demohub.api.config.ConfigManager"></bean>
+	<bean id="hubManager"  class="com.broadsoft.demohub.api.manager.HubManager" scope="prototype"></bean>
+	<bean id="hubAdapter"  class="com.broadsoft.demohub.api.adapter.HubAdapter" scope="prototype"></bean>
+	<bean id="loginService"  class="com.broadsoft.demohub.api.service.LoginService" scope="prototype"></bean>
+	<bean id="loginManager"  class="com.broadsoft.demohub.api.manager.LoginManager" scope="prototype"></bean>
+	<bean id="loginAdapter"  class="com.broadsoft.demohub.api.adapter.LoginAdapter" scope="prototype"></bean>
+	<bean id="mailService"   class="com.broadsoft.demohub.api.service.MailService"	scope="prototype"></bean>
+	<bean id="mailManager"   class="com.broadsoft.demohub.api.manager.MailManager"   scope="prototype"></bean>
+	<bean id="mailAdapter"   class="com.broadsoft.demohub.api.adapter.MailAdapter" scope="prototype"></bean>
+	<bean id="userLoginData" class="com.broadsoft.demohub.api.beans.UserLoginData" scope="prototype"></bean>
+	<bean id="authorization" class="com.broadsoft.demohub.api.beans.Authorization" scope="prototype"></bean>
+	<bean id="driveService"  class="com.broadsoft.demohub.api.service.DriveService" scope="prototype"></bean>
+	<bean id="driveManager"  class="com.broadsoft.demohub.api.manager.DriveManager" scope="prototype"></bean>
+	<bean id="driveAdapter"  class="com.broadsoft.demohub.api.adapter.DriveAdapter" scope="prototype"></bean>
+	<bean id="folderAdapter"  class="com.broadsoft.demohub.api.adapter.FolderAdapter" scope="prototype"></bean>
+	<bean id="userDataBean"  class="com.broadsoft.demohub.api.beans.UserDataBean" init-method="initMap">
+		<property name="userDataMap">
+    		<map></map>
+    	</property>
+	</bean>	
+	
+	
+	<bean id="mailData" class="com.broadsoft.demohub.api.beans.MailData"></bean>
+	<bean id="hashEncoderDecoder" class="com.broadsoft.demohub.api.security.HashEncoderDecoder"></bean>
+	<bean id="responseBuilder" class="com.broadsoft.demohub.api.response.manager.ResponseBuilder" />
+	<bean id="responseObjectManager" class="com.broadsoft.demohub.api.response.manager.ResponseObjectManager" />
+	<bean id="status" class="com.broadsoft.demohub.api.beans.Status" scope = "prototype"/>
+	<bean id="mailResponseParser" class="com.broadsoft.demohub.api.parser.MailResponseParser"/>
+	<bean id="inviteResponseParser" class="com.broadsoft.demohub.api.parser.InviteResponseParser"/>
+	<bean id="driveResponseParser" class="com.broadsoft.demohub.api.parser.DriveResponseParser"/>
+	<bean id="driveSearchResponseParser" class="com.broadsoft.demohub.api.parser.DriveSearchResponseParser"/>
+	</beans>

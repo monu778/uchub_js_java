@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>replaceWith demo</title>
+    <link rel="stylesheet" href="common/css/custom/fonts.css">
+    <link rel="stylesheet" href="common/css/custom/hub.css">
+    <link rel="stylesheet" href="components/drive/drive.css">
+</head>
+<script src="common/js/vendor/jquery-3.2.1.min.js"></script>
+<script src="common/js/vendor/jquery-uuid-master/jquery-uuid.js"></script>
+
+<body>
+    <div id="navbar" style="z-index: 110">
+        <div class="searchHolder">
+            <i class="icon-search"></i>
+            <input class="search input" type="text" placeholder="Drive Search" id="BroadSearch" />
+        </div>
+        <div class="contextualTabs">
+            <div class="subTabs">
+                <a class="subTab selected">My Files</a>
+                <a class="subTab">Recent</a>
+                <a class="subTab">Shared With Me</a>
+            </div>
+
+            <button class="mailBoxItem mail-box-btn">
+                <span>My Files</span>
+                <i class="icon-arrow-down"> </i>
+            </button>
+            <ul class="mailBoxItem mail-box-list" style="display: none">
+                <li class="subTab selected">My Files</li>
+                <li class="subTab">Recent</li>
+                <li class="subTab">Shared With Me</li>
+            </ul>
+
+        </div>
+       
+
+        <ul class="breadcrumb">
+            <li id="myDrive">My Drive</li>
+           
+          </ul>
+   
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content custom-modal">
+            <div class="respond_title modal_header">
+                <div class="modal-title white-color" id="modalTitle">
+                    <div class="text-left heading">Shared Link for <span id="dynamic-title"></span></div>
+                    <div class="dismissStyle logoStyle" id="dismiss">
+                        <span class="text-right icon-cross2"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="respond">
+                <form class="formStyle">
+                    <div class="modal_body">
+                        <div class="block text-left margin-bottom-5">
+                            <label for="link" class="labelsStyle no-padding">
+                                <strong class="labels"> Shared Link</strong>
+                            </label>
+                        </div>
+                        <div class="block text-left">
+                            <div class="linkInput">
+                                <input type="text" class="input-modal-style no-border linkStyle" id="shareLink" name="shareLink" disabled="disabled">
+                            </div>
+                            <div class="copyInput">
+                                <button type="button" class="modal_header no-border each-button white-color copyStyle" id="copy">COPY</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal_body">
+                        <div class="block text-left margin-bottom-5">
+                            <label for="link" class="labelsStyle no-padding">
+                                <strong class="labels"> Email Shared Link</strong>
+                            </label>
+                        </div>
+                        <div class="block text-left">
+                            <textarea class="input-modal-style text-area greyBorder block-padding" placeholder="Enter email addresses within your organization(comma separated)"
+                                rows="2" id="shareEmail"></textarea>
+                            <span id="shareLinkError" style="display:none">Please enter only valid Open Xchange Mails.</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="respond">
+                <div class="button-style">
+                    <a class="no-border blue-color each-button button-font" id="close">CANCEL</a>
+                    <button type="button" class="modal_header no-border each-button round-button white-color" id="send"></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal1" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content custom-modal">
+            <div class="respond_title modal_header">
+                <div class="modal-title white-color" id="modalTitle">
+                    <div class="text-left heading">Delete  file <span id="dynamic-title"></span></div>
+                    <div class="dismissStyle logoStyle" id="dismiss1">
+                        <span class="text-right icon-cross2"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="respond">
+                <div class="modal_body" id="delete_text"></div>                           
+            </div>
+            <div class="respond">
+                <div class="button-style">
+                    <a class="no-border blue-color each-button button-font" id="close1">CANCEL</a>
+                    <button type="button" class="modal_header no-border each-button round-button white-color" id="delete">DELETE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content custom-modal">
+            
+            <div class="respond">
+                <div class="modal_body" id="error_text">
+                    Unable to share.Please try later
+                </div>                           
+            </div>
+            <div class="respond">
+                <div class="button-style">
+                    <button type="button" class="modal_header no-border each-button round-button white-color" id="ok">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="container" id="actionButton">
+
+       <!-- <a href="javascript:void(0)" id="fileButton" class="buttons icon-box-file" title="File upload"></a> -->
+        
+
+        <!-- <a href="javascript:void(0)" id="folderButton" class="buttons icon-box-folder" title="Folder upload"></a>
+        <input class="hidden" id="folderInput" type="file" /> -->
+        <input id="fileInput" class="hidden" type="file" />
+        <a class="buttons icon-box-upload" id="fileButton" href="javascript:void(0)" title="File upload"></a>
+        
+    </nav>
+
+
+    <div id="widget" class="wrapper" style="z-index:5">
+
+    </div>
+    <div class="uploadStatus">
+        <div class="uploadStatusText">Uploading...</div>
+        <div class="loader"></div>
+    </div>
+    <div class="uploadStatusMessage">
+        <div class="uploadStatusText" id="statusMessage"></div>
+    </div>
+    <div id="searchNull">
+        <i class="icon-search"></i>
+        <span>No items were returned in your search.</span>
+    </div>
+    <div class="loadingGif">
+        <img class="loading" src="common/images/loading.gif" />
+    </div>
+    <div class="noMoreData">---All items displayed---</div>
+    <div class="noData">---No items found---</div>
+    <div class="spinningGif">
+        <img src="common/images/spinner.gif" />
+    </div>
+
+    <script src="config/appConfig.options.js"></script>
+    <script src="common/js/custom/refreshSession.js"></script>
+    <script src="common/js/custom/drive.ox.js"></script>
+
+    <script src="common/js/vendor/moment.js"></script>
+    <script src="common/js/vendor/moment-timezone.js"></script>
+    <script src="common/js/vendor/moment-timezone-with-data.js"></script>
+    <script src="common/js/vendor/Autolinker.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#searchNull').hide();
+            $('.spinningGif').hide();
+            var tz = moment.tz.guess(moment().format());
+            $.extend({
+                getUrlVars: function () {
+                    var vars = [],
+                        hash;
+                    var url = window.location.href;
+                    var hashes = url.slice(window.location.href.indexOf('?') + 1).split('&');
+                    for (var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        vars.push(hash[0]);
+                        vars[hash[0]] = hash[1];
+                    }
+                    return vars;
+                },
+                getUrlVar: function (name) {
+                    return $.getUrlVars()[name];
+                }
+            });
+            var auth = $.getUrlVar('auth');
+            driveService.setAuthData(auth);
+        }); 
+    </script>
+    <script src="components/drive/drive.js"></script>
+
+</body>
+
+</html>

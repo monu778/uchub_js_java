@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> 7fcb2173-3aac-46a2-b45a-b13a13c66120</title>
+    <link rel="stylesheet" href="common/css/custom/fonts.css">
+    <link rel="stylesheet" href="common/css/custom/hub.css">
+    <link rel="stylesheet" href="components/mail/mail.css">
+    <link rel="stylesheet" href="common/fonts/hub-icons-font-master/style.css">
+    <!--<link rel="stylesheet" href="common/fonts/hub-icons-font-master/demo-files/demo.css">-->
+    <link rel="stylesheet" href="common/css/custom/maildisp.css">
+    <link rel="stylesheet" href="common/js/vendor/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="common/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="common/js/vendor/moment.js"></script>
+    <script src="common/js/vendor/moment-timezone.js"></script>
+    <script src="common/js/vendor/jquery-ui-1.12.1/jquery-ui.js"></script>
+</head>
+
+<body class="mailDispBody">
+    <div class="mailHolder">
+        <div class="messageHeader">
+            <!-- <div class="iconBarHolder">
+                <div class="iconBar iconBarColor">
+                    <div id="icon-email-read"></div>
+                    <div class="icon-archive archive"></div>
+                </div>
+            </div> -->
+            <div class="titleHolder">
+                <div class="sender senderFormat" id="subject">
+                </div>
+            </div>
+            <div class="senderHolder">
+                <div class="logoStyle" id="logo"></div>
+                <div class="receiptionstHolder">
+                    <div class="subject subjStyle" id="from">
+
+                    </div>
+                    <div class="cc" id="allCcAddress">
+
+                    </div>
+                    <div class="to" id="to">
+                    </div>
+                </div>
+                <div class="rightTimestamp">
+                    <div class="timestamp" id="time_date"></div>
+                    <div class="attchStyle" id="attch">
+                        <span class="icon-attachment">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="messageBody msgBody" id="mbody"></div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="respond">
+            <div class="respond-each" id="Reply">
+                <div class="icon-each">
+                    <span class="icon-reply"></span>
+                </div>
+                Reply
+            </div>
+            <div class="respond-each" id="ReplyAll">
+                <div class="icon-each">
+                    <span class="icon-reply-all"></span>
+                </div>
+                Reply All
+            </div>
+            <div class="respond-each" id="Forward">
+                <div class="icon-each">
+                    <span class="icon-forward"></span>
+                </div>
+                Forward
+            </div>
+        </div>
+    </footer>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content custom-modal">
+            <div class="respond_title modal_header">
+                <h4 class="modal-title white-color" id="modalTitle"></h4>
+            </div>
+            <div class="respond">
+                <form>
+                    <div class="modal_body invalid-mail" style="display:none">
+                        Invalid email address
+                    </div>
+                    <div class="modal_body">
+                        <input type="email" class="input-modal-style" id="toRespond" placeholder="To" name="toRespond">
+                    </div>
+                    <div class="modal_body">
+                        <input type="email" class="input-modal-style" id="ccRespond" placeholder="Cc" name="ccRespond">
+                    </div>
+                    <div class="modal_body">
+                        <textarea class="input-modal-style text-area no-border" placeholder="Message" rows="5" id="messageRespond"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="respond">
+                <div class="button-style">
+                    <a class="no-border blue-color each-button button-font" id="close">CANCEL</a>
+                    <button type="button" class="modal_header no-border each-button round-button white-color" id="send">SEND</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="config/appConfig.options.js"></script>
+<script src="common/js/custom/refreshSession.js"></script>
+<script src="common/js/custom/mail.ox.js"></script>
+<script src="components/mail/mailmsg.js"></script>
+<script>
+    $(document).ready(function () {
+        console.log(moment().format('ddd'));
+        $.extend({
+            getUrlVars: function () {
+                var vars = [],
+                    hash;
+                var url = decodeURIComponent(window.location.href);
+                var hashes = url.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            },
+            getUrlVar: function (name) {
+                return $.getUrlVars()[name];
+            }
+        });
+        var auth = $.getUrlVar('auth');
+        var folder = $.getUrlVar('folder');
+        var id = $.getUrlVar('id');
+        mailService.setAuthData(auth);
+        mailService.setMailDispId(id);
+        mailService.setMailDispFolder(folder);
+        var TIME_FORMAT = 'ddd MMM D h:mm A';
+        $('#logo').hide();
+        $('#attch').hide();
+        mailObj.getMessage(auth, id, folder).then(function (data) {
+            if (data.hasOwnProperty('error')) {
+                var err = data.error.toLowerCase().indexOf("expired");
+                if (err > -1) {
+                    var reqParam = { 'auth': getAuthData().authData};
+                    refreshSession.getRefreshSession("https://orangehubservices.mpsvcs.com/hubservices/public/reloadSignUp.html?auth=" + reqParam.auth+"&type=mail", '_blank');
+                }
+            } else if (data.data) {
+                console.log("data.data", data);
+                var mailData = data.data;
+                $('#from').html(mailData.from[0][0] != "null" ? mailData.from[0][0] : mailData.from[0][1]);
+                $('#logo').html(mailData.from[0][0].charAt(0)).show();
+                $('#subject').text(mailData.subject);
+                $('#mbody').html(mailData.attachments[0].content);
+                $('#time_date').text(moment(mailData.received_date).utcOffset(0).format(TIME_FORMAT));
+                var mailTo = "";
+                for (ele of mailData.to) {
+                    var toAddress = ele[0] != "null" ? ele[0] : ele[1]
+                    mailTo += toAddress + ",";
+                }
+                for (eachCc of mailData.cc) {
+                    var toAddress = eachCc[0] != "null" ? eachCc[0] : eachCc[1]
+                    mailTo += toAddress + ",";
+                }
+                if (!data.data.attachment) {
+                    $('#attch').hide();
+                } else if (data.data.attachment) {
+                    for (var i in data.data.attachments) {
+                        if (data.data.attachments[i].disp == 'attachment') {
+                            $('#attch').show();
+                            //return;
+                        }
+                    }
+                }
+                mailTo = mailTo.substring(0, mailTo.length - 1);
+                console.log('mailmsg>>>', mailTo);
+                var fromAddress = mailData.from[0][0] != "null" ? mailData.from[0][0] : mailData.from[0][1];
+                //$mail = "<span>" + fromAddress + "</span><br/><span id='allCcAddress' style='font-size:11px'>to " + mailTo + '</span>';
+                //$('#allCcAddress').text("to " + mailTo);
+                //$('#from').text(fromAddress);
+                var from = mailData.from[0][0] == 'null' ? mailData.from[0][1] : mailData.from[0][0] + " <" + mailData.from[0][1] + ">\n";
+                var to = '';
+                var cc = '';
+                for (ele of mailData.to) {
+                    to += ele[0] == 'null' ? ele[1] + "," : ele[0] + " <" + ele[1] + ">,<br/>";
+                }
+                for (eachCc of mailData.cc) {
+                    cc += ele[0] == 'null' ? ele[1] + "," : ele[0] + " <" + ele[1] + ">,<br/>";
+                }
+                var finalToString = "<div id='tooltipStyle'><strong>from: </strong>" + from + "<br />";
+                finalToString = to !== '' ? (finalToString + "<strong>to: </strong>" + to + "<br/>") : finalToString;
+                finalToString = cc !== '' ? (finalToString + "<strong>cc: </strong>" + cc) : finalToString;
+                //finalToString=finalToString+"</div>"
+                //$mail = "<span>" + fromAddress + "</span><br/><div id='allCcAddress' class='trigger' style='font-size:8pt'>to " + mailTo + '</div>';
+                //$('#from').html($mail);
+                $('#from').text(fromAddress);
+                $('#allCcAddress').text("to " + mailTo);
+                var textOnly = finalToString.replace(/<[^>]+>/g, '');
+                console.log("textonly", textOnly);
+                $('#allCcAddress').attr('title', textOnly);
+            }
+        }, function (err) {
+            console.log(err);
+        });
+    });
+
+</script>
+
+</html>

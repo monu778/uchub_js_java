@@ -1,0 +1,307 @@
+{
+    "data" :[
+        {
+            "cc": [],
+            "bcc": [],
+            "level": 0,
+            "subject": "Invitation: test one more @ Wed May 2, 2018 10am - 11am (IST) (demo.openxchange@ucc.teaming.fr)",
+            "flags": 32,
+            "priority": 3,
+            "folderId": "default0/INBOX",
+            "isAttachment": true,
+            "accountId": 0,
+            "sentDate": 1525081395000,
+            "mailType": "Received in to",
+            "size": 22370,
+            "from": [
+                [
+                    "Brijesh Gupta",
+                    "brijeshbiet88@gmail.com"
+                ]
+            ],
+            "id": "165740",
+            "to": [
+                [
+                    null,
+                    "demo.openxchange@ucc.teaming.fr"
+                ],
+                [
+                    "Brijesh kumar",
+                    "brijeshbiet90@gmail.com"
+                ],
+                [
+                    null,
+                    "snayak@broadsot.com"
+                ],
+                [
+                    "Shubhada Nayak",
+                    "shubhadanayak93@gmail.com"
+                ]
+            ],
+            "receivedDate": 1525081402000
+        },
+        {
+            "cc": [],
+            "bcc": [],
+            "level": 0,
+            "subject": "Invitation: suvankar test @ Wed May 2, 2018 12:30pm - 1:30pm (IST) (demo.openxchange@ucc.teaming.fr)",
+            "flags": 32,
+            "priority": 3,
+            "folderId": "default0/INBOX",
+            "isAttachment": true,
+            "accountId": 0,
+            "sentDate": 1525084466000,
+            "mailType": "Received in to",
+            "size": 20624,
+            "from": [
+                [
+                    "Brijesh Gupta",
+                    "brijeshbiet88@gmail.com"
+                ]
+            ],
+            "id": "165801",
+            "to": [
+                [
+                    null,
+                    "demo.openxchange@ucc.teaming.fr"
+                ],
+                [
+                    null,
+                    "snayak@broadsoft.com"
+                ],
+                [
+                    null,
+                    "sgiri@broadsoft.com"
+                ]
+            ],
+            "receivedDate": 1525084472000
+        },
+        {
+            "cc": [],
+            "bcc": [],
+            "level": 0,
+            "subject": "Invitation: kya naam de @ Fri May 4, 2018 6:30pm - 7:30pm (IST) (demo.openxchange@ucc.teaming.fr)",
+            "flags": 32,
+            "priority": 3,
+            "folderId": "default0/INBOX",
+            "isAttachment": true,
+            "accountId": 0,
+            "sentDate": 1525251187000,
+            "mailType": "Received in to",
+            "size": 20051,
+            "from": [
+                [
+                    "Brijesh Gupta",
+                    "brijeshbiet88@gmail.com"
+                ]
+            ],
+            "id": "169106",
+            "to": [
+                [
+                    null,
+                    "demo.openxchange@ucc.teaming.fr"
+                ],
+                [
+                    "Brijesh kumar",
+                    "brijeshbiet90@gmail.com"
+                ],
+                [
+                    null,
+                    "vijeri@broadsoft.com"
+                ]
+            ],
+            "receivedDate": 1525251195000
+        },
+        {
+            "cc": [],
+            "bcc": [],
+            "level": 0,
+            "subject": "Fwd: Mitel 6867i - Installation guide",
+            "flags": 32,
+            "priority": 3,
+            "folderId": "default0/Sent",
+            "isAttachment": true,
+            "accountId": 0,
+            "sentDate": 1525344565000,
+            "mailType": "Sent in to",
+            "size": 523550,
+            "from": [
+                [
+                    null,
+                    "demo.openxchange@ucc.teaming.fr"
+                ]
+            ],
+            "id": "82",
+            "to": [
+                [
+                    null,
+                    "brijeshbiet88@gmail.com"
+                ]
+            ],
+            "receivedDate": 1525344565000
+        },
+        {
+            "cc": [],
+            "bcc": [],
+            "level": 0,
+            "subject": "Fwd: dde3aced-0347-42bf-a6f8-d238dbc17bae",
+            "flags": 32,
+            "priority": 3,
+            "folderId": "default0/Sent",
+            "isAttachment": false,
+            "accountId": 0,
+            "sentDate": 1525349356000,
+            "mailType": "Sent in to",
+            "size": 728,
+            "from": [
+                [
+                    null,
+                    "demo.openxchange@ucc.teaming.fr"
+                ]
+            ],
+            "id": "87",
+            "to": [
+                [
+                    "\"brijeshbiet88@gmail.com\"",
+                    "brijeshbiet88@gmail.com"
+                ]
+            ],
+            "receivedDate": 1525349356000
+        },
+        {
+            "cc": [],
+            "bcc": [],
+            "level": 0,
+            "subject": "Fwd: some more test",
+            "flags": 32,
+            "priority": 3,
+            "folderId": "default0/Sent",
+            "isAttachment": false,
+            "accountId": 0,
+            "sentDate": 1525349507000,
+            "mailType": "Sent in to",
+            "size": 1675,
+            "from": [
+                [
+                    null,
+                    "demo.openxchange@ucc.teaming.fr"
+                ]
+            ],
+            "id": "88",
+            "to": [
+                [
+                    "\"brijeshbiet88@gmail.com\"",
+                    "brijeshbiet88@gmail.com"
+                ]
+            ],
+            "receivedDate": 1525349507000
+        },
+        {
+            "cc": [
+                [
+                    null,
+                    "brijeshbiet90@gmail.com"
+                ]
+            ],
+            "bcc": [],
+            "level": 0,
+            "subject": "contextual text to",
+            "flags": 32,
+            "priority": 3,
+            "folderId": "default0/Sent",
+            "isAttachment": false,
+            "accountId": 0,
+            "sentDate": 1525602699000,
+            "mailType": "Sent in to",
+            "size": 1081,
+            "from": [
+                [
+                    "Demo OpenXchange",
+                    "demo.openxchange@ucc.teaming.fr"
+                ]
+            ],
+            "id": "139",
+            "to": [
+                [
+                    null,
+                    "brijeshbiet88@gmail.com"
+                ]
+            ],
+            "receivedDate": 1525602699000
+        },
+        {
+            "cc": [
+                [
+                    null,
+                    "brijeshbiet88@gmail.com"
+                ]
+            ],
+            "bcc": [],
+            "level": 0,
+            "subject": "est for sent in cc subject",
+            "flags": 32,
+            "priority": 3,
+            "folderId": "default0/Sent",
+            "isAttachment": false,
+            "accountId": 0,
+            "sentDate": 1526039896000,
+            "mailType": "Sent in cc",
+            "size": 1101,
+            "from": [
+                [
+                    "Demo OpenXchange",
+                    "demo.openxchange@ucc.teaming.fr"
+                ]
+            ],
+            "id": "145",
+            "to": [
+                [
+                    null,
+                    "snayak@broadsoft.com"
+                ]
+            ],
+            "receivedDate": 1526039896000
+        },
+        {
+            "cc": [
+                [
+                    null,
+                    "demo.openxchange@ucc.teaming.fr"
+                ],
+                [
+                    "Shubhada Nayak",
+                    "shubhadanayak93@gmail.com"
+                ],
+                [
+                    null,
+                    "bgupta@broadsoft.com"
+                ]
+            ],
+            "bcc": [],
+            "level": 0,
+            "subject": "test cc array subject",
+            "flags": 0,
+            "priority": 3,
+            "folderId": "default0/INBOX",
+            "isAttachment": false,
+            "accountId": 0,
+            "sentDate": 1526073530000,
+            "mailType": "Received in cc",
+            "size": 3588,
+            "from": [
+                [
+                    "Brijesh Gupta",
+                    "brijeshbiet88@gmail.com"
+                ]
+            ],
+            "id": "185396",
+            "to": [
+                [
+                    "Brijesh kumar",
+                    "brijeshbiet90@gmail.com"
+                ]
+            ],
+            "receivedDate": 1526073532000
+        }
+    ]
+}

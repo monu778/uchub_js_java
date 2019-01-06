@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>replaceWith demo</title>
+    <link rel="stylesheet" href="common/css/custom/fonts.css">
+    <link rel="stylesheet" href="common/css/custom/hub.css">
+    <link rel="stylesheet" href="common/fonts/hub-icons-font-master/style.css">
+    <link rel="stylesheet" href="common/fonts/hub-icons-font-master/demo-files/demo.css">
+    <link rel="stylesheet" href="components/mail/mail.css">
+    <link rel="stylesheet" href="components/contextualMail/contextualMail.css">
+    <link rel="stylesheet" href="common/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<script src="common/js/vendor/jquery-3.2.1.min.js"></script>
+<script src="common/js/vendor/jquery-uuid-master/jquery-uuid.js"></script>
+<script src="common/js/vendor/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
+
+<body>
+    <div id="navbar" style="z-index: 110" class="sticky">
+        <div class="searchHolder">
+            <i class="icon-search"></i>
+            <input class="search input" type="text" placeholder="Mail Search" id="BroadSearch" />
+        </div>
+        <div class="contextualTabs">
+            <div class="subTabs">
+                <a class="subTab selected">Emails</a>
+                <a class="subTab">Attachments</a>
+            </div>
+
+            <button  class="mailBoxItem mail-box-btn"> <span>Emails</span> <i class="icon-arrow-down"> </i> </button>
+            <ul class="mailBoxItem mail-box-list" style="display: none">
+                <li class="subitem">Emails</li>
+                <li class="subitem">Attachments</li>
+               
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="widget" class="wrapper" style="z-index:5">
+        
+    </div>
+    <div class="spinningGif"><img src="common/images/spinner.gif"/></div>
+    <script src="config/appConfig.options.js"></script>
+    <script src="common/js/custom/refreshSession.js"></script>
+    <script src="common/js/custom/mail.ox.js"></script>
+    <script src="common/js/custom/contextual.mail.ox.js"></script>
+    <script src="btbcConnection.js"></script>
+
+    <script src="common/js/vendor/moment.js"></script>
+    <script src="common/js/vendor/moment-timezone.js"></script>
+    <script src="common/js/vendor/moment-timezone-with-data.js"></script>
+    <script src="common/js/vendor/Autolinker.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            //resizeElementHeight($('#widget'));
+            var elementOffsetTop = $('#widget').offset().top;
+            var height = 0;
+            var body = window.document.body;
+            if (window.innerHeight) {
+                height = window.innerHeight;
+            } else if (body.parentElement.clientHeight) {
+                height = body.parentElement.clientHeight;
+            } else if (body && body.clientHeight) {
+                height = body.clientHeight;
+            }
+            $('#widget').height(Math.round(height - elementOffsetTop));
+            var tz = moment.tz.guess(moment().format());
+            console.log(tz);
+            $.extend({
+                getUrlVars: function() {
+                    var vars = [],
+                        hash;
+                    var url = window.location.href;
+                    var hashes = url.slice(window.location.href.indexOf('?') + 1).split('&');
+                    for (var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        vars.push(hash[0]);
+                        vars[hash[0]] = hash[1];
+                    }
+                    return vars;
+                },
+                getUrlVar: function(name) {
+                    return $.getUrlVars()[name];
+                }
+        });
+        var shouldUseMocks = window.appConfig.options.useMocks || false;
+        if(shouldUseMocks) {
+            var context = '%7B%22dada%22%3A%22adadad%22%2C%22dasda%22%3A%22adadadadasda%22%2C%22emails%22%3A%5B%22dsds%40adsada.com%22%5D%7D';
+        } else {
+            var context = $.getUrlVar('context');
+        }
+        var auth = $.getUrlVar('auth');
+        var contextString = decodeURIComponent(context);
+        var contextObject = JSON.parse(contextString);
+        ContextualMailService.setAuthData(auth);
+        ContextualMailService.setEmailId(contextObject.emails[0]);
+});
+
+    function resizeElementHeight(element) {
+        var height = 0;
+        var body = window.document.body;
+        if (window.innerHeight) {
+            height = window.innerHeight;
+        } else if (body.parentElement.clientHeight) {
+            height = body.parentElement.clientHeight;
+        } else if (body && body.clientHeight) {
+            height = body.clientHeight;
+        }
+        element.style.height = ((height - element.offsetTop) + "px");
+    }
+    </script>
+    <script src="components/contextualMail/contextualMail.js "></script>
+</body>
+
+</html>

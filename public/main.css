@@ -1,0 +1,77 @@
+*{
+  margin : 0;
+  padding: 0;
+}
+body{
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  font-size: 30px;
+}
+p {
+  font-size: 12px;
+  font-weight: normal;
+}
+.middlepart{
+  font-size: 16px;
+  font-family: "Helvetica Neue";
+  width: 40.5%;
+  margin: 100px auto 0 auto;
+}
+header{
+  background-color: black;
+  /*height: 80px;*/
+  color: white;
+}
+.imageposition{
+  margin: 20px !important;
+}
+.container{
+  /*width: 1170px;*/
+  margin: 0 auto;
+  overflow: hidden;
+}
+.openxchange{
+  background-color: #60aede;
+  color: black;
+  font-size: 35px;
+  padding: 25px;
+}
+.loginblock{
+  overflow: hidden;
+}
+.passwordblock{
+  margin-top:10px;
+  overflow: hidden;
+}
+.logintext{
+  display: inline-block;
+  width: 160px;
+}
+.inputblock{
+  border: 1px solid #ccc;
+  border-width: 2px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 10px;
+  width: 60%;
+}
+.loginbtn{
+  background-color: #f16e00;
+  border-color: #f16e00;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: .7rem 1.8rem .9rem 1.8rem;
+  cursor: pointer;
+  float: right;
+}
+.loginbtn:hover{
+  background-color: black;
+  border-color: black;
+}
+.clearfix{
+  clear: both;
+}

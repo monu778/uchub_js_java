@@ -1,0 +1,286 @@
+.respond {
+    display: block;
+    text-align: center;
+    background-color: rgb(245,248,249);
+    border-top: 1px solid #EEEEEE;
+}
+.respond-each{
+    margin:auto;
+    display:inline-block;
+    padding:10px;
+    font-size:8pt;
+    cursor:pointer;
+}
+
+.icon-each {
+    font-size: 25px;
+}
+
+.modal_header {
+    background-color: #03AFEF
+}
+
+.text-area {
+    resize: none;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+.no-border {
+    border: none;
+}
+
+.blue-color {
+    color: #03AFEF;
+}
+
+.white-color {
+    color: white;
+}
+#myModal{
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: transparent;
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.custom-modal {
+    border: none;
+    padding: 0px;
+    box-shadow: 0px 0px 35px 15px hsl(0, 0%, 75%);
+}
+
+.respond_title {
+    display: block;
+}
+
+.input-modal-style {
+    width: 97%;
+    padding: 1%;
+}
+
+.modal_body {
+    padding: 1%;
+}
+
+.invalid-mail{
+    padding: 1%;
+    margin: 1%;
+    color: red;
+    background-color: pink;
+    border: 1px solid red;
+}
+
+.modal-title {
+    padding: 1%;
+    margin: 0px;
+    font-weight: normal;
+}
+
+.button-style {
+    padding: 1%;
+    text-align: right;
+}
+
+.each-button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.round-button {
+    border-radius: 10%;
+}
+
+.round_upload {
+    -webkit-background-size: 42px 42px;
+    background-color: rgb(53, 175, 249);
+    background-size: 42px 42px;
+    -webkit-border-radius: 50%;
+    color: white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin: -1px;
+    overflow: hidden;
+    position: relative;
+    height: 42px;
+    width: 42px;
+    z-index: 1000;
+    font-size: 1.5em;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }
+ .makeScrollable{
+    overflow-y: scroll;
+ }
+ /* .attch{
+    position: absolute;
+    left: 98%;
+    bottom: 38%;
+ } */
+ .mailDispBody{
+    font-family:Arial, Helvetica, sans-serif;
+    /*padding:10px*/ 
+ }
+ .iconBarColor{
+    background: #e6e6e6 !important;
+ }
+ .senderFormat{
+    /*background: #e6e6e6;*/
+    font-weight: bold;font-size:12pt;
+    padding: 20px 12px;
+ }
+ .logoStyle{
+    padding:10px 0;
+    border-radius:50%;
+    background-color: #03AFEF;
+    display: inline-block;
+    color: white;
+    position: relative;
+    bottom:10px;
+    height:20px;
+    width:40px;
+    text-align: center;
+ }
+ .subjStyle{
+    /*padding: 12px;*/
+    font-size:13px;
+    display: inline-block;
+    font-weight: 600;
+ }
+ .attchStyle{
+    position: relative;
+    /*left: 96%;*/
+   /* bottom: 0%; */
+    width: 100%;
+    text-align: right;
+    display: inline-block;
+ }
+ .msgBody{
+    padding: 12px;
+    max-height: 100% !important;
+ }
+
+ .titleHolder {
+     background-color: rgb(245,248,249);
+     display: block;
+     border-bottom: 1px solid #EEEEEE;
+}
+
+.mailDispBody .senderHolder{
+    display: table !important;
+    padding: 10px;
+    background: #FAFAFA;
+    margin-top:10px;
+}
+
+.receiptionstHolder{
+    display:inline-block;
+    margin-left: 10px;
+}
+.to{
+    font-size: 12px;
+}
+.cc{
+    font-size: 12px;
+}
+.cc:hover{
+    color: #03AFEF
+}
+.rightTimestamp{
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: right;
+    float: right;
+}
+.rightTimestamp .timestamp{
+    display: inline-block;
+    line-height: 0;
+    float: none;
+    font-size:12px;
+}
+.mailDispBody .messageBody{
+    display: table;
+    height:380px !important;
+    overflow: auto;
+}
+
+.mailDispBody .messageBody::-webkit-scrollbar{
+    display: block !important;
+    width: 10px !important;
+}
+.mailDispBody .messageBody::-webkit-scrollbar-track{
+    background: #f1f1f1 !important;
+}
+.mailDispBody .messageBody::-webkit-scrollbar-thumb{
+    background: #626262 !important;
+}
+.mailDispBody .messageBody::-webkit-scrollbar-thumb:hover{
+    background: #000 !important;
+}
+
+#tooltipStyle{
+    font-size: 10pt;
+}
+
+input:hover {
+    box-shadow: inset 0 -2px #ccc;
+}
+input, fieldset {
+    font-family: sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+input {
+    color: inherit;
+    line-height: 1.5;
+    height: 1.5em;
+    padding: .25em 0;
+}
+input:focus {
+    outline: none;
+    box-shadow: inset 0 -2px #449fdb;
+}

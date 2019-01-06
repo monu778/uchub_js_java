@@ -1,0 +1,23 @@
+{
+  "name": "@bsft/hub-icon-font",
+  "version": "3.1.17",
+  "description": "Hub Icons Font ==============",
+  "scripts": {
+    "test": "grunt jscs && grunt jshint"
+  },
+  "devDependencies": {
+    "base64-font-loader": "0.0.4"
+  },
+  "author": "",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.broadsoft.com/BroadSoftLabs/hubIconFont.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://git.broadsoft.com/BroadSoftLabs/hubIconFont/issues"
+  },
+  "homepage": "https://git.broadsoft.com/BroadSoftLabs/hubIconFont#readme"
+}

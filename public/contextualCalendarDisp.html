@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ReplaceWith demo</title>
+    <link rel="stylesheet" href="common/css/custom/fonts.css">
+    <link rel="stylesheet" href="common/css/custom/hub.css">
+    <link rel="stylesheet" href="components/contextualCalendar/contextualCalendar.css">
+    <link rel="stylesheet" href="common/css/custom/shedCalDisp.css">
+
+    <link rel="stylesheet" href="common/js/vendor/pg-calender/css/pignose.calendar.min.css ">
+    <link rel="stylesheet" href="common/js/vendor/jonthornton-jquery-timepicker-b53338c/jquery.timepicker.css">
+
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<script src="common/js/vendor/jquery-3.2.1.min.js"></script>
+<script src="common/js/vendor/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
+<script src="common/js/vendor/jonthornton-jquery-timepicker-b53338c/jquery.timepicker.min.js"></script>
+
+<body>
+    <div id="navbar" style="z-index: 110" class="sticky">
+        <div class="searchHolder">
+            <i class="icon-search"></i>
+            <input class="search input" type="text" placeholder="Calendar Search" id="BroadSearch" />
+        </div>
+         <!--<div class="contextualTabs">
+            <div class="subTabs">
+                <a class="subTab selected">Upcoming Meetings</a>
+                <a class="subTab">Schedule Meetings</a>
+            </div>
+        </div>-->
+        <!-- <div class="scheduleMeetingHeading">Select a meeting time slot below</div> -->
+    </div>
+
+    </div>
+
+    <!--<div class="no-data" style="display: none;">No upcoming meetings</div>-->
+    <div id="widget" class="wrapper" style="z-index:5">
+
+        <div id="Schedule_Meetings">
+
+            <div class="create-meeting-header">
+                <span class="modal-title white-color" id="modalTitle">Create Meeting</span>
+            </div>
+
+            <div class="respond">
+                <form>
+                    <div class="ftext">
+                        <input type="text" placeholder="Title" id="titleSM"/>
+                    </div>
+                    <div class="ftext">
+                        <input type="text" placeholder="Location" id="locationSM"/>
+                    </div>
+                    <div class="ftextarea">
+                        <textarea placeholder="Description" id="descSM"></textarea>
+                    </div>
+
+                    <div id="choose-date">
+                        <span class="icon-calendar"> </span>
+                        <span> Select Date </span>
+                        <span id="selected-date" ></span>
+                    </div>
+
+
+                    <div class="choose-time">
+                        <div class="choose-time-content">
+                            <span class="start-time">Start</span>
+                            <div class="start-time-dropdown">
+                                <input class="dropbtn" type="button" id="start-time">
+                            </div>
+                        </div>
+
+                        <div class="choose-time-content">
+                            <span class="start-time">End</span>
+                            <div class="start-time-dropdown">
+                                <input class="dropbtn" id="end-time" type="button">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
+                            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                            <label for="filled-in-box">Remind me</label>
+                        </p>
+                        <hr class="hr-style">
+                        <div>
+                            <input type="text" id="attendee-email" placeholder="Attendee Email Address" />
+                            <span class="icon-plus-thin-circle" id="add-attendee"></span>
+                        </div>
+                        <div>
+                            <ul id="attendee-email-list">
+                                <li type="square">srgarlap@broadsoft.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+                </div>
+                <hr  class="hr-style">
+                <div class="respond">
+                    <div class="button-style">
+                        <a class="no-border blue-color each-button button-font" id="close">CANCEL</a>
+                        <button type="button" class="modal_header no-border each-button round-button white-color" id="send">SEND</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!--<div id="searchNull"><i class="icon-search"></i><span>No items were returned in your search.</span></div>-->
+        <!--<div class="loadingGif"><img class="loading" src="common/images/loading.gif" /></div>-->
+        <div class="spinningGif"><img src="common/images/spinner.gif" /></div>
+        <!--<div class="noMoreData" style="display: none">---All items displayed---</div>-->
+        <script src="config/appConfig.options.js"></script>
+        <script src="common/js/custom/refreshSession.js"></script>
+        <script src="common/js/custom/contextual.calendar.ox.js"></script>
+        <script src="common/js/vendor/moment.js"></script>
+        <script src="common/js/vendor/moment-timezone.js"></script>
+        <script src="common/js/vendor/moment-timezone-with-data.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#searchNull').hide();
+                //$('.scheduleMeetingHeading').hide();
+                var elementOffsetTop = $('#widget').offset().top;
+                var height = 0;
+                var body = window.document.body;
+                if (window.innerHeight) {
+                    height = window.innerHeight;
+                } else if (body.parentElement.clientHeight) {
+                    height = body.parentElement.clientHeight;
+                } else if (body && body.clientHeight) {
+                    height = body.clientHeight;
+                }
+                $('#widget').height(Math.round(height - elementOffsetTop));
+
+                $.extend({
+                    getUrlVars: function () {
+                        var vars = [],
+                            hash;
+                        var url = window.location.href;
+                        var hashes = url.slice(window.location.href.indexOf('?') + 1).split('&');
+                        for (var i = 0; i < hashes.length; i++) {
+                            hash = hashes[i].split('=');
+                            vars.push(hash[0]);
+                            vars[hash[0]] = hash[1];
+                        }
+                        return vars;
+                    },
+                    getUrlVar: function (name) {
+                        return $.getUrlVars()[name];
+                    }
+                });
+                var shouldUseMocks = window.appConfig.options.useMocks || false;
+                if (shouldUseMocks) {
+                    var context = '%7B%22dada%22%3A%22adadad%22%2C%22dasda%22%3A%22adadadadasda%22%2C%22emails%22%3A%5B%22dsds%40adsada.com%22%5D%7D';
+                } else {
+                    var context = $.getUrlVar('context');
+                }
+                var auth = $.getUrlVar('auth');
+                var contextString = decodeURIComponent(context);
+                var contextObject = JSON.parse(contextString);
+                calendarService.setAuthData(auth);
+                calendarService.setEmailId(contextObject.emails[0]);
+            });
+        </script>
+
+        <script src="common/js/vendor/moment.js"></script>
+        <script src="common/js/vendor/moment-timezone.js"></script>
+        <script src="common/js/vendor/moment-timezone-with-data.js"></script>
+        <script src="common/js/vendor/Autolinker.min.js"></script>
+        <script src="components/contextualCalendar/contextualCalendar.js"></script>
+        <script src="common/js/vendor/pg-calender/js/pignose.calendar.full.js"></script>
+        
+
+</body>
+
+</html>

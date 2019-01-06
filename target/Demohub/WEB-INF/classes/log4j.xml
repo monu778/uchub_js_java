@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright © 2016 BroadSoft. All rights reserved. -->
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/log4j.dtd">
+<!-- ===================================================================== -->
+<!-- -->
+<!-- Log4j Configuration for Module -->
+<!-- -->
+<!-- ===================================================================== -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+	<appender name="apiLoggerAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/Users/srgarlap/demohublogs/apilogs/apilog.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="2MB" />
+		<param name="maxBackupIndex" value="1000" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- The default pattern: Date Priority [Category] Message\n -->
+
+			<!-- http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html -->
+			<param name="ConversionPattern" value="%d [%l]  [%p]  [%t] %X{tid} [Method: %M][Msg: %m ] %n" />
+
+		</layout>
+	</appender>
+
+	<logger name="com.broadsoft.demohub.api">
+		<level value="INFO" />
+		<appender-ref ref="apiLoggerAppender" />
+	</logger>
+	<root>
+		<priority value="ERROR" />
+	</root>
+
+</log4j:configuration>

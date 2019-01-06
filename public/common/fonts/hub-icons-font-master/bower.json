@@ -1,0 +1,30 @@
+{
+  "name": "HubIconFont",
+  "homepage": "https://git.broadsoft.com/BroadSoftLabs/HubIconFont",
+  "authors": [
+    "BroadsoftLabs"
+  ],
+  "description": "Hub icons font as a bower component",
+  "main": [
+    "style.css",
+    "fonts/hub-icons-font.eot.eot",
+    "fonts/hub-icons-font.eot.svg",
+    "fonts/hub-icons-font.eot.ttf",
+    "fonts/hub-icons-font.eot.woff"
+  ],
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "bower.json",
+    "demo-files",
+    "demo.html",
+    "hub-icon-font.json",
+    "Read Me.txt",
+    "selection.json"
+  ]
+}

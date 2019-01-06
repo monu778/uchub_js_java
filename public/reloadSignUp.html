@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Xchange Mail - Sign in</title>
+    <link rel="stylesheet" href="main.css" media="screen" title="no title">
+    <script src="common/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="common/js/vendor/jquery.form.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="imageposition">
+                <img src="common/images/ox-logo.png" />&nbsp;<span id="type_text">Open Xchange Mail</span>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="signUpId">
+        <form method="post" action="/hubservices/rest/refreshsession" id="refreshForm">
+            <div class="middlepart">
+                <div class="loginblock">
+                    <label class="logintext">Username </label>
+                    <input type="text" name="name" class="inputblock" id="Username" value="">
+                </div>
+                <div class="passwordblock">
+                    <label class="logintext">Password </label>
+                    <input type="password" name="password" id="psswd" class="inputblock" value="">
+                </div>
+                <input type="hidden" name="auth" id="auth" />
+                <input type="hidden" name="type" id="type" />
+                <button type="submit" class="loginbtn" id="login">To log in</button>
+                <div class="clearfix"></div>
+            </div>
+        </form>
+    </div>
+    <div class="container" id="message">
+       <h2>Your session is refreshed.Please close this tab and reload your app</h2>
+    </div>
+    <script src="config/appConfig.options.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#refreshForm').ajaxForm({
+                        dataType: 'json',
+                        success: function (response) {
+                            console.log("The server says: " , response);
+                            var data = response;
+                            if(data.data && data.data.username && (data.data.username == $('#Username').val())){
+                                $('#signUpId').hide();
+                                $('#message').show();
+                            }
+                        }
+                    });
+            $.extend({
+                getUrlVars: function () {
+                    var vars = [],
+                        hash;
+                    var url = window.location.href;
+                    var hashes = url.slice(window.location.href.indexOf('?') + 1).split('&');
+                    for (var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        vars.push(hash[0]);
+                        vars[hash[0]] = hash[1];
+                    }
+                    return vars;
+                },
+                getUrlVar: function (name) {
+                    return $.getUrlVars()[name];
+                }
+            });
+            $('#message').hide();
+            var auth = $.getUrlVar('auth');
+            var type = $.getUrlVar('type');
+            if(type == 'mail') {
+                document.title =  "Open Xchange Mail - Sign in";
+                $('#type_text').html("Open Xchange Mail");
+            } else if(type == "drive") {
+                document.title =  "Open Xchange Drive - Sign in";
+                $('#type_text').html("Open Xchange Drive");
+            } else if(type == "calendar") {
+                document.title =  "Open Xchange Calendar - Sign in";
+                $('#type_text').html("Open Xchange Calendar");
+            }
+            var baseApiUrl = window.appConfig.options.mail.baseApiUrl;
+            $('#auth').val(auth);
+            $('#type').val(type);
+            $('#login').on('click',function(){
+            
+            })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Open Xchange Drive - Sign in</title>
+  <link rel="stylesheet" href="main.css" media="screen" title="no title">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="imageposition">
+        <img src="common/images/ox-logo.png"/> Open Xchange Drive
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <form method="post" action="/hubservices/rest/drive/signupUser" class="">
+      <div class="middlepart">
+        <div class="loginblock">
+        <label class="logintext">Username </label>
+          <input type="text" name="name" class="inputblock" value="">
+        </div>
+        <div class="passwordblock">
+          <label class="logintext">Password </label>
+            <input type="password" name="password" class="inputblock" value="">
+        </div>
+        <button type="submit" class="loginbtn">To log in</button>
+        <div class="clearfix"></div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

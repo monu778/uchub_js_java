@@ -1,0 +1,414 @@
+.respond {
+    display: block;
+    text-align: left;
+    padding: 15px;
+    background-color:white
+}
+.respond-each{
+    margin:auto;display:inline-block;padding:10px;font-size:8pt;
+    cursor:pointer;
+}
+
+.icon-each {
+    font-size: 23pt;
+}
+
+.modal_header {
+    background-color: #03AFEF
+}
+
+.text-area {
+    resize: none;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+.no-border {
+    border: none;
+}
+
+.-colblueor {
+    color: #03AFEF;
+}
+
+.white-color {
+    color: white;
+}
+
+.addIcon {
+    display: block;
+    float: right;
+    border: 1px solid white;
+    background: #03AFEF;
+    align-content: center;
+    border-radius: 50%;
+    color: #FFF;
+}
+.clearIcon {
+    display: inline;
+    vertical-align: middle;
+    text-align: center;
+    float: right;
+    border: 1px solid  #03AFEF;
+    align-content: center;
+    border-radius: 50%;
+    color: #03AFEF;
+    height:30px;
+    width: 30px;
+
+}
+
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+[type="checkbox"] + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  font-size: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+[type="checkbox"] + label:before,
+[type="checkbox"]:not(.filled-in) + label:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  z-index: 0;
+  border: 2px solid #5a5a5a;
+  border-radius: 1px;
+  margin-top: 2px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+[type="checkbox"]:not(.filled-in) + label:after {
+  border: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+[type="checkbox"]:not(:checked):disabled + label:before {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+[type="checkbox"].tabbed:focus + label:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+[type="checkbox"]:checked + label:before {
+  top: -4px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid #050000;
+  border-bottom: 1px solid  #050000;
+  
+}
+
+[type="checkbox"]:checked:disabled + label:before {
+  border-right: 2px solid rgba(0, 0, 0, 0.42);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.42);
+}
+
+/* Indeterminate checkbox */
+[type="checkbox"]:indeterminate + label:before {
+  top: -11px;
+  left: -12px;
+  width: 10px;
+  height: 22px;
+  border-top: none;
+  border-left: none;
+  border-right: 2px solid  #5a5a5a;
+  border-bottom: none;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+[type="checkbox"]:indeterminate:disabled + label:before {
+  border-right: 2px solid rgba(0, 0, 0, 0.42);
+  background-color: transparent;
+}
+
+[type="checkbox"].filled-in + label:after {
+  border-radius: 2px;
+}
+
+[type="checkbox"].filled-in + label:before,
+[type="checkbox"].filled-in + label:after {
+  content: '';
+  left: 0;
+  position: absolute;
+  /* .1s delay is for check animation */
+  -webkit-transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+  transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+  z-index: 1;
+}
+
+[type="checkbox"].filled-in:not(:checked) + label:before {
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  left: 6px;
+  top: 10px;
+  -webkit-transform: rotateZ(37deg);
+          transform: rotateZ(37deg);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+[type="checkbox"].filled-in:not(:checked) + label:after {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 2px solid #5a5a5a;
+  top: 0px;
+  z-index: 0;
+}
+
+[type="checkbox"].filled-in:checked + label:before {
+  top: 0;
+  left: 1px;
+  width: 8px;
+  height: 13px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotateZ(37deg);
+          transform: rotateZ(37deg);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+[type="checkbox"].filled-in:checked + label:after {
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #5a5a5a;
+  background-color: #5a5a5a;
+  z-index: 0;
+}
+
+[type="checkbox"].filled-in.tabbed:focus + label:after {
+  border-radius: 2px;
+  border-color: #5a5a5a;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+[type="checkbox"].filled-in.tabbed:checked:focus + label:after {
+  border-radius: 2px;
+  background-color:  #5a5a5a;
+  border-color: #5a5a5a;
+}
+
+[type="checkbox"].filled-in:disabled:not(:checked) + label:before {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+[type="checkbox"].filled-in:disabled:not(:checked) + label:after {
+  border-color: transparent;
+  background-color: #949494;
+}
+
+[type="checkbox"].filled-in:disabled:checked + label:before {
+  background-color: transparent;
+}
+
+
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 30%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: transparent;
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #03AFEF;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.custom-modal {
+    border: none;
+    padding: 0px;
+    box-shadow: 0px 0px 35px 15px rgb(0, 0, 0, 0.2);
+}
+
+.respond_title {
+    display: block;
+}
+
+.input-modal-style {
+    width: 97%;
+    padding: 1%;
+}
+
+.modal_body {
+    padding: 1%;
+}
+
+.modal-title {
+    padding: 1%;
+    margin: 0px;
+    font-weight: normal;
+}
+
+.button-style {
+    padding: 1%;
+    text-align: right;
+}
+
+.each-button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }
+ .makeScrollable{
+    overflow-y: scroll;
+ }
+ /* .attch{
+    position: absolute;
+    left: 98%;
+    bottom: 38%;
+ } */
+ textarea:focus, input[type="text"]:focus{
+    outline: none;
+    border-bottom:1px solid #03AFEF
+}
+
+input[type="text"],textarea{
+    background-color: transparent;
+    width:100%;
+    border-top:0px solid;
+    border-left:0px solid;
+    border-right:0px solid;
+    border-bottom:1px solid;
+    height:40px;
+    color: #CCC;
+    box-shadow: inset 0 0px #e7e7e7;
+    font-family: "Roboto", helvetica, sans-serif;
+}
+
+textarea {
+  min-height: 70px !important;
+  
+}
+
+hr {
+    color: #CCC
+}
+
+select {
+    background-color: transparent;
+    border-top:0px solid;
+    border-left:0px solid;
+    border-right:0px solid;
+    border-bottom:1px solid;
+    height: 20px;
+    width: 160px;
+    color: #CCC
+}
+
+.dropdown {
+    float: left;
+    border-bottom:1px solid #ccc;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 12px;    
+    border: none;
+    outline: none;
+    padding: 10px 1px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    border:1px solid #03AFEF
+    width: 30%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content .header {
+   
+    padding: 5px;
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+

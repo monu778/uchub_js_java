@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Open Xchange Mail - Sign in</title>
+  <link rel="stylesheet" href="main.css" media="screen" title="no title">
+  <script src="common/js/vendor/jquery-3.2.1.min.js"></script>
+  <script src="common/js/vendor/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="imageposition">
+        <img src="common/images/ox-logo.png"/> Open Xchange Mail
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <form method="post" action="/hubservices/rest/signupUser" class="">
+      <div class="middlepart">
+        <div class="loginblock">
+        <label class="logintext">Username </label>
+          <input type="text" name="name" class="inputblock" id="Username" value="">
+        </div>
+        <div class="passwordblock">
+          <label class="logintext">Password </label>
+            <input type="password" name="password" id="psswd" class="inputblock" value="">
+        </div>
+        <button type="submit" class="loginbtn" id="login">To log in</button>
+        <div class="clearfix"></div>
+      </div>
+    </form>
+  </div>
+  <script>
+    $(document).ready(function () {
+            //mailService.setAuthData(byName);
+            $('#login').on('click',function(){
+              $.cookie('mail-username',$('#Username').val());
+              $.cookie('mail-password',$('#psswd').val());
+            })
+        });
+  </script>
+</body>
+</html>

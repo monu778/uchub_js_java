@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>replaceWith demo</title>
+    <link rel="stylesheet" href="common/css/custom/fonts.css">
+    <link rel="stylesheet" href="common/css/custom/hub.css">
+    <link rel="stylesheet" href="components/mail/mail.css">
+    <link rel="stylesheet" href="common/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<script src="common/js/vendor/jquery-3.2.1.min.js"></script>
+<script src="common/js/vendor/jquery-uuid-master/jquery-uuid.js"></script>
+<script src="common/js/vendor/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
+
+<body>
+    <div id="navbar" style="z-index: 110">
+        <div class="searchHolder">
+            <i class="icon-search"></i>
+            <input class="search input" type="text" placeholder="Mail Search" id="BroadSearch" />
+        </div>
+        <div class="contextualTabs">
+            <div class="subTabs">
+                <a class="subTab" id="Archive">Archive</a>
+                <a class="subTab" id="Unread">Unread</a>
+                <a class="subTab" id="Today">Today</a>
+                <a class="subTab" id="Inbox">Inbox</a>
+            </div>
+
+             
+           <button  class="mailBoxItem mail-box-btn"> <span>Inbox</span> <i class="icon-arrow-down"> </i> </button>
+           <ul class=" mailBoxItem mail-box-list" style="display: none">
+               <li class="subitem" id="subitem_Archive">Archive</li>
+               <li class="subitem" id="subitem_Unread">Unread</li>
+               <li class="subitem" id="subitem_Today">Today</li>
+               <li class="subitem" id="subitem_Inbox">Inbox</li>
+           </ul>
+          
+        </div>
+    </div>
+
+
+    <div id="widget" class="wrapper" style="z-index:5">
+
+    </div>
+    <div id="searchNull"><i class="icon-search"></i><span>No items were returned in your search.</span></div>
+    <div class="loadingGif"><img class="loading" src="common/images/loading.gif"/></div>
+    <div class="spinningGif"><img src="common/images/spinner.gif" /></div>
+    <div class="noMoreData">---All items displayed---</div>
+    <div class="noData">---No items found---</div>
+
+    <script src="config/appConfig.options.js"></script>
+    <script src="common/js/custom/refreshSession.js"></script>
+    <script src="common/js/custom/mail.ox.js"></script>
+    <script src="btbcConnection.js"></script>
+
+    <script src="common/js/vendor/moment.js"></script>
+    <script src="common/js/vendor/moment-timezone.js"></script>
+    <script src="common/js/vendor/moment-timezone-with-data.js"></script>
+    <script src="common/js/vendor/Autolinker.min.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+            $('#searchNull').hide();
+            var tz = moment.tz.guess(moment().format());
+        console.log(tz);
+        $.extend({
+            getUrlVars: function() {
+                var vars = [],
+                    hash;
+                var url = window.location.href;
+                var hashes = url.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            },
+            getUrlVar: function(name) {
+                return $.getUrlVars()[name];
+            }
+        });
+        var byName = $.getUrlVar('auth');
+        mailService.setAuthData(byName);
+});
+        
+    </script>
+    <script src="components/mail/mail.js "></script>
+
+</body>
+
+</html>

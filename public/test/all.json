@@ -1,0 +1,200 @@
+{
+"data": [
+  {
+      "id": "219495",
+      "folderId": "default0/INBOX",
+      "isAttachment": false,
+      "from": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "to": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "cc": [],
+      "bcc": [],
+      "subject": "b3f31eef-24f8-49db-a06d-7eb9f7ddcd47",
+      "size": 2277,
+      "sentDate": null,
+      "receivedDate": 1527787666000,
+      "flags": 2,
+      "level": 0,
+      "priority": 3,
+      "accountId": 0,
+      "mailType": null
+  },
+  {
+      "id": "219494",
+      "folderId": "default0/INBOX",
+      "isAttachment": false,
+      "from": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "to": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "cc": [],
+      "bcc": [],
+      "subject": "d8d6d910-091d-481b-a94a-e7816d922205",
+      "size": 2276,
+      "sentDate": null,
+      "receivedDate": 1527787664000,
+      "flags": 0,
+      "level": 0,
+      "priority": 3,
+      "accountId": 0,
+      "mailType": null
+  },
+  {
+      "id": "219493",
+      "folderId": "default0/INBOX",
+      "isAttachment": false,
+      "from": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "to": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "cc": [],
+      "bcc": [],
+      "subject": "b0232be6-79d4-4a39-b332-71b4f9ab1f1e",
+      "size": 2272,
+      "sentDate": null,
+      "receivedDate": 1527787632000,
+      "flags": 2,
+      "level": 0,
+      "priority": 3,
+      "accountId": 0,
+      "mailType": null
+  },
+  {
+      "id": "219492",
+      "folderId": "default0/INBOX",
+      "isAttachment": false,
+      "from": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "to": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "cc": [],
+      "bcc": [],
+      "subject": "39dd365c-967e-43f9-9e09-9410d5534536",
+      "size": 2271,
+      "sentDate": null,
+      "receivedDate": 1527787630000,
+      "flags": 0,
+      "level": 0,
+      "priority": 3,
+      "accountId": 0,
+      "mailType": null
+  },
+  {
+      "id": "219491",
+      "folderId": "default0/INBOX",
+      "isAttachment": false,
+      "from": [
+          [
+              null,
+              "no-reply@open-xchange.com"
+          ]
+      ],
+      "to": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "cc": [],
+      "bcc": [],
+      "subject": "a2e8ef9c-445f-4788-b339-b76537c788e7",
+      "size": 1930,
+      "sentDate": null,
+      "receivedDate": 1527787559000,
+      "flags": 2,
+      "level": 0,
+      "priority": 3,
+      "accountId": 0,
+      "mailType": null
+  },
+  {
+      "id": "219490",
+      "folderId": "default0/INBOX",
+      "isAttachment": false,
+      "from": [
+          [
+              null,
+              "no-reply@open-xchange.com"
+          ]
+      ],
+      "to": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "cc": [],
+      "bcc": [],
+      "subject": "14ff2b3c-d57c-4826-b0ad-15226f4d778f",
+      "size": 1934,
+      "sentDate": null,
+      "receivedDate": 1527787541000,
+      "flags": 2,
+      "level": 0,
+      "priority": 3,
+      "accountId": 0,
+      "mailType": null
+  },
+  {
+      "id": "219489",
+      "folderId": "default0/INBOX",
+      "isAttachment": false,
+      "from": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "to": [
+          [
+              null,
+              "demo.openxchange@ucc.teaming.fr"
+          ]
+      ],
+      "cc": [],
+      "bcc": [],
+      "subject": "41ecae18-c0f0-4982-a91f-454887b1ed20",
+      "size": 2301,
+      "sentDate": null,
+      "receivedDate": 1527787362000,
+      "flags": 2,
+      "level": 0,
+      "priority": 3,
+      "accountId": 0,
+      "mailType": null
+  }
+]
+}
